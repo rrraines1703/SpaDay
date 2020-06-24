@@ -22,7 +22,7 @@ namespace SpaDay.Models
             nextId++;
         }
 
-        public User(string username, string email, string password) : this()
+        public User(string username, string email, string password)
         {
             Username = username;
             Email = email;
@@ -30,20 +30,5 @@ namespace SpaDay.Models
             Date = DateTime.Today;
         }
 
-        public override string ToString()
-        {
-            return Username;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return obj is User user &&
-                   Id == user.Id;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
     }
 }
